@@ -1,3 +1,5 @@
+//Eduardo Scaburi Costa Barros - PEDA
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
