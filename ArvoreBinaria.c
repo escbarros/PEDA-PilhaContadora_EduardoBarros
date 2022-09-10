@@ -15,7 +15,6 @@ struct Item* novoItem(int valor){
 	auxiliar->esquerda = NULL;
 	auxiliar->valor = valor;
 	auxiliar->direita = NULL;
-  printf("\n\t%d", valor);
 
 	return auxiliar;
 }
