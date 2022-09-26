@@ -1,4 +1,3 @@
-//Eduardo Scaburi Costa Barros - PEDA
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -77,6 +76,7 @@ void encontra(int array[], int valor){
     for (int i = 0; i < tamanho; ++i){//varre a array imprimindo todos os items inseridos nela
       if(array[i] == valor){//verifica se o valor é igual ao procurado        
         printf("%d ", array[i]);
+        return;
       }
     }
 }
