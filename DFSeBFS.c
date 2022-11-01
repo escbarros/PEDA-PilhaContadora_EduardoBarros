@@ -16,10 +16,10 @@ struct grafo {
   int* visitado;
   struct aresta** listaAdjacencia;
 };
-struct fila {
+struct queue {
   int items[TAMANHO];
-  int frente;
-  int fim;
+  int front;
+  int rear;
 };
 
 struct aresta* criaAdjacencia(int v) {
@@ -88,6 +88,24 @@ void printAdjMatrix() {
     printf("\n");
   }
 }
+
+void DFS(struct grafo* grafo, int vertice) {
+  struct aresta* adjList = grafo->listaAdjacencia[vertice];
+  struct aresta* temp = adjList;
+
+  adjMatrix[vertice][vertice] = 1;
+  printf("Iterado: vértice %d \n", vertice);
+
+  while (temp != NULL) {
+    int verticeConectado = temp->vertice;
+
+    if (adjMatrix[verticeConectado][verticeConectado] == 0) {
+      DFS(grafo, verticeConectado);
+    }
+    temp = temp->prox;
+  }
+}
+
 
 
 int main() {
